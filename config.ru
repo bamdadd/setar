@@ -5,9 +5,7 @@ Bundler.require
 
 
 require 'sinatra/base'
-require File.join(File.dirname(__FILE__), 'app', 'controllers', 'routes')
-
-set :show_exceptions, true
+require_relative 'app/controllers/routes'
 
 run Setar
 
