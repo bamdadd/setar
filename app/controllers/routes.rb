@@ -11,7 +11,7 @@ class Setar < Sinatra::Base
     end
 
     get '/courses' do
-      hash = YMLFileReader.new('/Users/bdashtba/projects/setar/data/lessons.yml').read
+      hash = YMLFileReader.new(Pathname.new(__FILE__).parent.parent.parent.join('data/lessons.yml')).read
       lessons = LessonStore.new(hash).find_all
       CoursesPage.new(self, lessons).page.render
     end
