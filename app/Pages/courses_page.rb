@@ -1,4 +1,5 @@
 require_relative 'slim_page'
+
 class CoursesPage
   def initialize(app, lessons)
     @app = app
