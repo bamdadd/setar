@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative '../pages/courses_page.rb'
+require_relative 'pages/courses_page.rb'
 require_relative '../../app/utilities/yml_file_reader'
 require_relative '../../app/stores/lesson_store'
 class Setar < Sinatra::Base
