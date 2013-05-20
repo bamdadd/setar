@@ -1,9 +1,10 @@
 class Lesson
-  attr_reader :title, :image, :url
-  def initialize(lesson_hash)
-    @lesson_hash = lesson_hash
+  attr_reader :title, :image, :url, :id
+  def initialize(id, data)
+    @lesson_hash = data
     @title = @lesson_hash["title"]
     @image = @lesson_hash["img"]
     @url = @lesson_hash["url"]
+    @id = id
   end
 end

@@ -11,8 +11,10 @@ describe 'Lesson Store' do
     }
 
     all_lessons = LessonStore.new(hash).find_all
+    all_lessons[0].id.should eq "lesson001"
     all_lessons[0].title.should eq "lesson 1"
     all_lessons[0].image.should eq "image1.jpg"
+    all_lessons[1].id.should eq "lesson002"
     all_lessons[1].title.should eq "lesson 2"
     all_lessons[1].image.should eq "image2.jpg"
   end

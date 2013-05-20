@@ -6,7 +6,8 @@ gem 'slim'
 gem 'rake'
 gem 'i18n', '0.6.4'
 gem 'multi_json', '1.7.3'
-
+gem 'rest-client'
+gem 'httpclient'
 
 group :test, :development do
   gem 'shotgun'

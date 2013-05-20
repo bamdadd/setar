@@ -1,6 +1,8 @@
 h1 Courses List
 h2 دستور مقدماتی تار و ستار - کتاب اول
 - lessons.each do |lesson|
-  h3 #{lesson.title}
-  img src="/imgs/lessons/#{lesson.image}"
-  iframe width="100%" height="166" scrolling="no" frameborder="no" src="#{lesson.url}"
+  div id="#{lesson.id}"
+    h3 #{lesson.title}
+    img src="/imgs/lessons/#{lesson.image}"
+    iframe width="100%" height="166" scrolling="no" frameborder="no" src="#{lesson.url}"
+    a href="#"  تمرین

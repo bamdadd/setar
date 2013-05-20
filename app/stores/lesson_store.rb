@@ -5,6 +5,6 @@ class LessonStore
   end
 
   def find_all
-    @hash.collect {|lesson_hash|  Lesson.new(lesson_hash[1]) }
+    @hash.collect {|lesson_data|  Lesson.new(lesson_data[0], lesson_data[1]) }
   end
 end
