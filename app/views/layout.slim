@@ -1,6 +1,10 @@
 doctype html
 html
   head
+    link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"
+    link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"
+    link rel="stylesheet" type="text/css" href="/css/screen.css"
+
     style
       |
         :lang(fa){
@@ -10,5 +14,6 @@ html
     title Learn to Play an instrument
     link rel="stylesheet" type="text/css" href="/stylesheets/style.css"
   body lang="fa"
+    == render :slim, :'partials/navbar'
     == yield
 

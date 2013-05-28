@@ -1,8 +1,18 @@
-h1 Courses List
-h2 دستور مقدماتی تار و ستار - کتاب اول
-- lessons.each do |lesson|
-  div id="#{lesson.id}"
-    h3 #{lesson.title}
-    img src="/imgs/lessons/#{lesson.image}"
-    iframe width="100%" height="166" scrolling="no" frameborder="no" src="#{lesson.url}"
-    a href="#"  تمرین
+div.container
+  div.hero-unit#top-hero
+    h1 لیست درس ها
+    h2 دستور مقدماتی تار و ستار - کتاب اول
+  div.container
+    - lessons.each_slice(2) do |l1, l2|
+      div.row
+        div.span6.right id="#{l1.id}"
+          h3 #{l1.title}
+          img src="/imgs/lessons/#{l1.image}" style="width:100%;"
+          iframe width="100%" height="166" scrolling="no" frameborder="no" src="#{l1.url}"
+          a href="#"  تمری
+        - if l2
+          div.span6 id="#{l2.id}"
+                  h3 #{l2.title}
+                  img src="/imgs/lessons/#{l2.image}" style="width:100%;"
+                  iframe width="100%" height="166" scrolling="no" frameborder="no" src="#{l2.url}"
+                  a href="#"  تمرینن
